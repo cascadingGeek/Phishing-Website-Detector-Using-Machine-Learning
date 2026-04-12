@@ -1,0 +1,81 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+*.whl
+MANIFEST
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.env/
+
+# ── Environment / secrets ──────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ── uv ────────────────────────────────────────────────────────────────────────
+# uv.lock is intentionally committed — remove this line if you want to ignore it
+# uv.lock
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# ── Type checking ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.pyright/
+pyrightconfig.json
+
+# ── ML artifacts (large binaries — store in object storage, not git) ──────────
+app/artifacts/**/*.joblib
+app/artifacts/**/*.pkl
+app/artifacts/**/*.h5
+app/artifacts/**/*.pt
+app/artifacts/**/*.pth
+app/artifacts/**/*.onnx
+# Keep metadata.json committed (small, human-readable)
+!app/artifacts/**/metadata.json
+
+# ── Alembic ───────────────────────────────────────────────────────────────────
+# Keep migrations/ committed; ignore only the local Alembic output dir if used
+alembic/versions/__pycache__/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS & editor noise ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Streamlit (legacy frontend, no longer in use) ─────────────────────────────
+.streamlit/
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.orig
