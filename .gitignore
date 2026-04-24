@@ -41,14 +41,14 @@ htmlcov/
 pyrightconfig.json
 
 # ── ML artifacts (large binaries — store in object storage, not git) ──────────
-app/artifacts/**/*.joblib
 app/artifacts/**/*.pkl
 app/artifacts/**/*.h5
 app/artifacts/**/*.pt
 app/artifacts/**/*.pth
 app/artifacts/**/*.onnx
-# Keep metadata.json committed (small, human-readable)
+# Keep metadata.json and joblib artifacts committed (model is ~440 KB)
 !app/artifacts/**/metadata.json
+!app/artifacts/**/*.joblib
 
 # ── Alembic ───────────────────────────────────────────────────────────────────
 # Keep migrations/ committed; ignore only the local Alembic output dir if used
