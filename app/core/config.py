@@ -28,8 +28,8 @@ class Settings(BaseSettings):
     # DATABASE
     database_url: str
 
-    # CORS origins for the Streamlit frontend
-    cors_origins: list[str]
+    # CORS origins — comma-separated string (e.g. "https://a.com,https://b.com")
+    cors_origins: str = "*"
 
     # Request timeout for feature extraction network calls (seconds)
     request_timeout: int = 30
